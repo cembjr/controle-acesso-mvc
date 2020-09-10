@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CB.ControleLogin.WebApp
+namespace CB.WebApp.MVC
 {
     public class Program
     {

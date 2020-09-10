@@ -1,10 +1,10 @@
-﻿using CB.ControleLogin.WebApp.Extensions;
+﻿using CB.WebApp.MVC.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CB.ControleLogin.WebApp.Configuration
+namespace CB.WebApp.MVC.Configuration
 {
     public static class WebAppConfig
     {

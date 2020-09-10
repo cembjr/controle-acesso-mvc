@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CB.ControleLogin.WebApp.Models;
+using CB.WebApp.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CB.ControleLogin.WebApp.Controllers
+namespace CB.WebApp.MVC.Controllers
 {
     public class MainController : Controller
     {

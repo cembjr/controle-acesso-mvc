@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Extensions.ViewComponents
+namespace CB.WebApp.MVC.Extensions.ViewComponents
 {
     public class SummaryViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             return View();
         }

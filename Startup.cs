@@ -1,11 +1,11 @@
-using CB.ControleLogin.WebApp.Configuration;
+using CB.WebApp.MVC.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CB.ControleLogin.WebApp
+namespace CB.WebApp.MVC
 {
     public class Startup
     {

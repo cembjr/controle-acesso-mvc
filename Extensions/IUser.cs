@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Extensions
+namespace CB.WebApp.MVC.Extensions
 {
     public interface IUser
     {

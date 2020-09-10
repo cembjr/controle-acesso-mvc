@@ -1,6 +1,6 @@
 using System;
 
-namespace CB.ControleLogin.WebApp.Models
+namespace CB.WebApp.MVC.Models
 {
     public class ErrorViewModel
     {

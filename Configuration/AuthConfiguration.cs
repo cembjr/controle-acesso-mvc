@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CB.ControleLogin.WebApp.Configuration
+namespace CB.WebApp.MVC.Configuration
 {
     public static class AuthConfiguration
     {

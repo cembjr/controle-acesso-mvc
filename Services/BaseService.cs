@@ -1,10 +1,10 @@
-﻿using CB.ControleLogin.WebApp.Extensions;
+﻿using CB.WebApp.MVC.Extensions;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Services
+namespace CB.WebApp.MVC.Services
 {
     public class BaseService
     {

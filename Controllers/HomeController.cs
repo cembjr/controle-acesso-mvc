@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CB.ControleLogin.WebApp.Models;
+using CB.WebApp.MVC.Models;
 
-namespace CB.ControleLogin.WebApp.Controllers
+namespace CB.WebApp.MVC.Controllers
 {
     public class HomeController : Controller
     {

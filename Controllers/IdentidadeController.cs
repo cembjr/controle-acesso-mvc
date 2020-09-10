@@ -5,13 +5,13 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Permissions;
 using System.Threading.Tasks;
-using CB.ControleLogin.WebApp.Models;
-using CB.ControleLogin.WebApp.Services;
+using CB.WebApp.MVC.Models;
+using CB.WebApp.MVC.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CB.ControleLogin.WebApp.Controllers
+namespace CB.WebApp.MVC.Controllers
 {
     public class IdentidadeController : MainController
     {
@@ -24,7 +24,7 @@ namespace CB.ControleLogin.WebApp.Controllers
 
         [HttpGet]
         [Route("nova-conta")]
-        public async Task<IActionResult> Registrar()
+        public IActionResult Registrar()
         {
             return View();
         }

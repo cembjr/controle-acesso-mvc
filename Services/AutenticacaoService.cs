@@ -1,4 +1,4 @@
-﻿using CB.ControleLogin.WebApp.Models;
+﻿using CB.WebApp.MVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Services
+namespace CB.WebApp.MVC.Services
 {
     public class AutenticacaoService : BaseService, IAutenticacaoService
     {

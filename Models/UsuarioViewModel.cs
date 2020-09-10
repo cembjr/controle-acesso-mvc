@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Models
+namespace CB.WebApp.MVC.Models
 {
     public class UsuarioRegistro
     {

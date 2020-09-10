@@ -1,5 +1,5 @@
-﻿using CB.ControleLogin.WebApp.Extensions;
-using CB.ControleLogin.WebApp.Services;
+﻿using CB.WebApp.MVC.Extensions;
+using CB.WebApp.MVC.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CB.ControleLogin.WebApp.Configuration
+namespace CB.WebApp.MVC.Configuration
 {
     public static class RegisterServicesConfiguration
     {
