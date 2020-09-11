@@ -10,51 +10,22 @@ namespace CB.WebApp.MVC.Services
 {
     public class AutenticacaoService : BaseService, IAutenticacaoService
     {
-        private readonly HttpClient _httpClient;
         private const string URL_REGISTRAR = "api/identidade/registrar";
         private const string URL_AUTENTICAR = "api/identidade/autenticar";
-        public AutenticacaoService(HttpClient httpClient)
+        public AutenticacaoService(HttpClient httpClient) : base(httpClient, new Uri("https://localhost:44398/"))
         {
-            this._httpClient = httpClient;
-            httpClient.BaseAddress = new Uri("https://localhost:44398/");
         }
 
-        public async Task<UsuarioResponseLogin> Login(UsuarioLogin usuarioLogin)
+        public async Task<ResponseResult<UsuarioResponseLogin>> Login(UsuarioLogin usuarioLogin)
         {
-            var loginContent = GetContent(usuarioLogin);
-
-            var response = await _httpClient.PostAsync(URL_AUTENTICAR, loginContent);
-
-            if (!IsResponseValido(response))
-            {
-                return new UsuarioResponseLogin
-                {
-                    Erros = await Deserialize<ErrosResponse>(response)
-                };
-            }
-
-            var retorno = await Deserialize<UsuarioResponseLogin>(response);
-
-            return retorno;
+            var response = await Post<UsuarioLogin, UsuarioResponseLogin>(usuarioLogin, URL_AUTENTICAR);
+            return response;
         }
 
-        public async Task<UsuarioResponseLogin> Registro(UsuarioRegistro usuarioRegistro)
+        public async Task<ResponseResult<UsuarioResponseLogin>> Registro(UsuarioRegistro usuarioRegistro)
         {
-            var registroContent = GetContent(usuarioRegistro);
-
-            var response = await _httpClient.PostAsync(URL_REGISTRAR, registroContent);
-
-            if (!IsResponseValido(response))
-            {
-                return new UsuarioResponseLogin
-                {
-                    Erros = await Deserialize<ErrosResponse>(response)
-                };
-            }
-
-            var retorno = await Deserialize<UsuarioResponseLogin>(response);
-
-            return retorno;
+            var response = await Post<UsuarioRegistro, UsuarioResponseLogin>(usuarioRegistro, URL_REGISTRAR);            
+            return response;
         }
     }
 }

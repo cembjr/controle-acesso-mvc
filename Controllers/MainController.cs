@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CB.WebApp.MVC.Models;
+﻿using CB.WebApp.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace CB.WebApp.MVC.Controllers
 {
     public class MainController : Controller
     {
-        protected bool HasResponseErros(ErrosResponse erros)
+        protected bool HasResponseErros(IResponseErros response)
         {
-            if (erros == null || (erros != null && !erros.Erros.Any())) return false;
+            var erros = response.ErrosResponse?.Erros ?? new ErrosResponse().Erros;
+            if (erros == null || (erros != null && erros.Count == 0)) return false;
 
-            foreach (var mensagem in erros.Erros)
+            foreach (var mensagem in erros)
                 ModelState.AddModelError(string.Empty, mensagem);
             
             return true;

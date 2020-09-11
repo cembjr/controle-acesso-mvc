@@ -1,6 +1,7 @@
-using CB.WebApp.MVC.Configuration;
+﻿using CB.WebApp.MVC.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,7 +32,7 @@ namespace CB.WebApp.MVC
         {
             services.AddAuthConfiguration();
             services.AddWebAppConfiguration();
-            services.RegisterServices();
+            services.RegisterServices();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

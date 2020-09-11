@@ -38,9 +38,9 @@ namespace CB.WebApp.MVC.Controllers
             // api registro
             var response = await autenticacaoService.Registro(usuarioRegistro);
 
-            if (HasResponseErros(response.Erros)) return View(usuarioRegistro);
+            if (HasResponseErros(response)) return View(usuarioRegistro);
 
-            await RealizarLogin(response);
+            await RealizarLogin(response.Result);
 
             return RedirectToAction("Index", "Home");
         }
@@ -64,9 +64,9 @@ namespace CB.WebApp.MVC.Controllers
             // api registro
             var response = await autenticacaoService.Login(usuarioLogin);
 
-            if (HasResponseErros(response.Erros)) return View(usuarioLogin);
+            if (HasResponseErros(response)) return View(usuarioLogin);
 
-            await RealizarLogin(response);
+            await RealizarLogin(response.Result);
 
             if (string.IsNullOrEmpty(returnUrl)) return RedirectToAction("Index", "Home");
 

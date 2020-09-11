@@ -31,12 +31,11 @@ namespace CB.WebApp.MVC.Models
         public string Senha { get; set; }
     }
 
-    public class UsuarioResponseLogin
+    public class UsuarioResponseLogin : IResponse
     {
         public string AccessToken { get; set; }
         public double ExpiresIn { get; set; }
         public UsuarioToken UsuarioToken { get; set; }
-        public ErrosResponse Erros { get; set; }
     }
 
     public class ErrosResponse

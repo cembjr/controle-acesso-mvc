@@ -8,8 +8,8 @@ namespace CB.WebApp.MVC.Services
 {
     public interface IAutenticacaoService
     {
-        Task<UsuarioResponseLogin> Login(UsuarioLogin usuarioLogin);
+        Task<ResponseResult<UsuarioResponseLogin>> Login(UsuarioLogin usuarioLogin);
 
-        Task<UsuarioResponseLogin> Registro(UsuarioRegistro usuarioRegistro);
+        Task<ResponseResult<UsuarioResponseLogin>> Registro(UsuarioRegistro usuarioRegistro);
     }
 }
